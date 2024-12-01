@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: troubleshooter
+  labels:
+    app: test
+spec:
+  containers:
+  - name: test-container
+    image: curlimages/curl:latest
+    command: ["/bin/sh", "-c", "sleep 3600"]
